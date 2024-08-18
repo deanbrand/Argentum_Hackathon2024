@@ -1,6 +1,6 @@
-path: C:\Users\6mbra\Programming\SBH2024\good_data\data
-train: images\train
-val: images\train
+path: /path/to/data/SBH2024/good_data/data
+train: images/train
+val: images/train
 
 # Classes
 names:
