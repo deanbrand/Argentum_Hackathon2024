@@ -30,8 +30,7 @@ The file `01eda.ipynb` deals with the initial data analysis where the labels and
 ## Bounding Boxes
 Now with clean data that can be fed into a YOLO model, the test image boxes can be predicted. To train the YOLO model, the `main.py` and `data.yaml` files are used. In the correct environment with `ultralytics` installed, the `main.py` file can be run. From here the best model can be chosen from the best train detection weights. To run the validation and predictions, respectively, the following commands are used:
 `yolo val model=runs/detect/train/weights/best.pt data=data.yaml`
-`yolo task=detect mode=predict model=runs/detect/train/weights/best.pt source=path/to/data/images/test save=Tr
-ue`
+`yolo task=detect mode=predict model=runs/detect/train/weights/best.pt source=path/to/data/images/test save=True` After which the `test_pred.ipynb` notebook can be used to generate the annotation label files.
 
 ## Depth Estimation
 For the generation of depth heatmaps, the PatchFusion library is used. This part is more involved and requires the installation of another set of packages/environments, but once set up, the heatmaps can be generated through: `python ./tools/test.py configs/patchfusion_depthanything/depthanything_general.py --ckp-path Zhyever/patchfusion_depth
